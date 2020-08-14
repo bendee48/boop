@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 # Pretty DB records in console
 gem 'hirb', '~> 0.7.3'
+#Sematic UI
+gem 'semantic-ui-sass', '~> 2.4', '>= 2.4.2.0'
+gem 'jquery-rails', '~> 4.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
