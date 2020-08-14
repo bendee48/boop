@@ -31,5 +31,10 @@ module Boop
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    #Hirb setup
+    console do
+      Hirb.enable
+    end
   end
 end
