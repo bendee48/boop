@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :login_redirect, only: [:new, :create]
+  
   def new
   end
 
@@ -19,5 +21,14 @@ class SessionsController < ApplicationController
     session[:current_user_id] = nil
     flash.notice = "Successfully logged out."
     redirect_to login_path
+  end
+
+  private
+
+  def login_redirect
+    if logged_in?
+      flash.alert = "You are already logged in."
+      redirect_to root_path
+    end
   end
 end
