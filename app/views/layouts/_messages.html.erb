@@ -1,0 +1,7 @@
+<% colours = {'alert' => 'red', 'notice' => 'green'}%>
+<% flash.each do |msg_type, msg| %>
+  <div class="ui tertiary center aligned segment inverted floating message <%= colours[msg_type]%>">
+    <i class="close icon"></i>
+    <%= msg %>
+  </div>
+<% end %>

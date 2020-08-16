@@ -5,12 +5,15 @@
       <a class="item">Messages</a>
       <div class="right menu">
         <div class="ui dropdown item">
-          <div class="text">Prooofile</div>
+          <div class="text">Account</div>
           <i class="dropdown icon"></i>
-          <div class="menu">
-            <%= link_to "Log In", login_path, class: "item" %>
-            <div class="item">What</div>
-            <div class="item">Sign Up</div>
+          <div class="menu"> 
+            <% if logged_in? %>
+              <%= link_to 'Sign Out', logout_path, method: :delete, class: "item" %>
+            <% else %>
+              <%= link_to "Log In", login_path, class: "item" %>
+              <%= link_to "Sign Up", login_path, class: "item" %>
+            <% end %>
           </div>
         </div>
         <a class="item">Login</a>
