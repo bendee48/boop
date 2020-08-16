@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :messages
+  has_many :messages, dependent: :destroy
   has_secure_password
 
   validates :username, presence: true, length: { in: 3..15 },

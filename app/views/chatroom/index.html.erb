@@ -9,16 +9,7 @@
       <div class="ui fluid card chatbox">
         <div class="content">
           <div class="ui feed">
-            <% @messages.each do |msg| %>
-              <div class="event">
-                  <div class="label">
-                    <%= image_tag('hiphiphorray.jpeg') %>
-                  </div>
-                  <div class="content">
-                    <em><%= msg.user.username %>: </em><%= msg.body %>
-                  </div>
-              </div>
-            <% end %>
+            <%= render @messages %>
           </div>
         </div>
         <div class="extra content">
