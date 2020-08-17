@@ -7,9 +7,6 @@ class MessagesController < ApplicationController
     if @message.save
       ActionCable.server.broadcast "chatroom_channel",
                                     message: render_message(@message)
-    else
-      flash.alert = @message.errors.full_messages.join(',')
-      redirect_to root_path
     end
   end
 
