@@ -5,7 +5,7 @@ RSpec.describe "Chatrooms", type: :request do
 
   describe "GET /" do
     it "displays chatroom" do
-    
+      
     end
   end
 end
