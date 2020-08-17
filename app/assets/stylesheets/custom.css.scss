@@ -1,7 +1,12 @@
 @import "semantic-ui";
 
-.chatbox {
+.ui.chatbox {
   height: 100%;
+  box-shadow: 2px 2px 8px rgb(238, 221, 144);
+}
+
+#chat-container {
+  margin-top: 5%;
 }
 
 .margin {
@@ -23,6 +28,8 @@
   font-size: 30px;
   font-weight: bold;
   padding: 0;
-  text-decoration: none;
-  color: white;
+}
+
+#logo-pic {
+  box-shadow: 2px 2px 8px rgb(238, 221, 144);
 }
